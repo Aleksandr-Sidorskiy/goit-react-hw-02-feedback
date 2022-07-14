@@ -3,7 +3,8 @@ import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
 import Section from "./SectionTitle/SectionTitle";
 import Notification from "./Notification/Notification";
-import styled from 'styled-components';
+
+import { Container, Wrapper } from './StyleApp';
 
 class App extends React.Component{
 
@@ -34,7 +35,7 @@ class App extends React.Component{
     let result = 0;
 
     if (totalFeedback > 0) {
-      result = Math.ceil((goodFeedback / totalFeedback) * 100);
+      result = Math.round((goodFeedback / totalFeedback) * 100);
     }
 
     return `${result}%`;
@@ -77,16 +78,5 @@ class App extends React.Component{
   }
 }
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 20px;
-  `;
 
-const Wrapper = styled.div`
-
-width: 700px;
-box-shadow: 0px 0px 10px 2px rgba(0,0,0,.5);
-`;
 export default App;

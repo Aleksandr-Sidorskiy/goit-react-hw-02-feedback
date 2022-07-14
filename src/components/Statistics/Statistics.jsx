@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import styled from "styled-components";
+import { List, Item, Text } from './StyleStatistics';
 
 
 function Statistics({good, neutral, bad, total, positivePercentage}) {
@@ -40,25 +40,8 @@ Statistics.propTypes = {
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
-    positivePercentage:PropTypes.number.isRequired  
+    positivePercentage:PropTypes.string.isRequired  
 }
 
-const List = styled.ul`
-display: flex;
-flex-direction: column;
 
-`;
-const Item = styled.li`
-margin-bottom: 5px;
-display: flex;
-justify-content: center;
-align-items: baseline;
-
-`;
-const Text = styled.p`
-font-family: "roboto";
-font-size: 20px;
-font-weight: 500;
-color: #212121;
-`;
 export default Statistics;

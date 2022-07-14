@@ -1,13 +1,10 @@
 
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import {Text} from './StyleNotification'
 
 
 
-const Text = styled.p`
-color: #ccc;
-text-align: center;
-`
+
 function Notification({message}) {
     return (
         <div>
